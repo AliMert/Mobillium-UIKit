@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderView" customModule="Mobillium" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="AfE-Wh-3wy" id="EJi-PI-X1J"/>
+                <outlet property="pageControl" destination="T0e-iR-xgr" id="CAY-Ok-05W"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AfE-Wh-3wy">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b6Z-GG-jL8">
+                        <size key="itemSize" width="414" height="150"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="T0e-iR-xgr">
+                    <rect key="frame" x="149.5" y="862" width="115.5" height="26"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="AfE-Wh-3wy" secondAttribute="bottom" id="2qE-Zc-dhN"/>
+                <constraint firstItem="AfE-Wh-3wy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DWA-ih-bHn"/>
+                <constraint firstAttribute="bottom" secondItem="T0e-iR-xgr" secondAttribute="bottom" constant="8" id="UJI-1E-kRA"/>
+                <constraint firstAttribute="trailing" secondItem="AfE-Wh-3wy" secondAttribute="trailing" id="mZK-Xf-kxG"/>
+                <constraint firstItem="T0e-iR-xgr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tdo-Ol-WG6"/>
+                <constraint firstItem="AfE-Wh-3wy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wcW-mq-T8l"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="101"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

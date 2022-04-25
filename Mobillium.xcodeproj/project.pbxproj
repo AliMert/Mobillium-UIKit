@@ -13,6 +13,12 @@
 		E151B82F28171DFF001BE4CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E151B82D28171DFF001BE4CC /* Main.storyboard */; };
 		E151B83128171E00001BE4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E151B83028171E00001BE4CC /* Assets.xcassets */; };
 		E151B83428171E00001BE4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E151B83228171E00001BE4CC /* LaunchScreen.storyboard */; };
+		E151B83F28172C00001BE4CC /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B83D28172C00001BE4CC /* SliderCollectionViewCell.swift */; };
+		E151B84028172C00001BE4CC /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E151B83E28172C00001BE4CC /* SliderCollectionViewCell.xib */; };
+		E151B8442817339B001BE4CC /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8422817339B001BE4CC /* MovieListTableViewCell.swift */; };
+		E151B8452817339B001BE4CC /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E151B8432817339B001BE4CC /* MovieListTableViewCell.xib */; };
+		E151B84A2817417C001BE4CC /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E151B8492817417C001BE4CC /* SliderView.xib */; };
+		E151B84C28174238001BE4CC /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B84B28174238001BE4CC /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		E151B83028171E00001BE4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E151B83328171E00001BE4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E151B83528171E00001BE4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E151B83D28172C00001BE4CC /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		E151B83E28172C00001BE4CC /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
+		E151B8422817339B001BE4CC /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		E151B8432817339B001BE4CC /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
+		E151B8492817417C001BE4CC /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
+		E151B84B28174238001BE4CC /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,61 @@
 		E151B82628171DFF001BE4CC /* Mobillium */ = {
 			isa = PBXGroup;
 			children = (
-				E151B82728171DFF001BE4CC /* AppDelegate.swift */,
 				E151B82928171DFF001BE4CC /* SceneDelegate.swift */,
-				E151B82B28171DFF001BE4CC /* ViewController.swift */,
+				E151B82728171DFF001BE4CC /* AppDelegate.swift */,
+				E151B84E28176910001BE4CC /* MovieList */,
 				E151B82D28171DFF001BE4CC /* Main.storyboard */,
 				E151B83028171E00001BE4CC /* Assets.xcassets */,
 				E151B83228171E00001BE4CC /* LaunchScreen.storyboard */,
 				E151B83528171E00001BE4CC /* Info.plist */,
 			);
 			path = Mobillium;
+			sourceTree = "<group>";
+		};
+		E151B84128173287001BE4CC /* SliderCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E151B83D28172C00001BE4CC /* SliderCollectionViewCell.swift */,
+				E151B83E28172C00001BE4CC /* SliderCollectionViewCell.xib */,
+			);
+			path = SliderCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E151B846281733A0001BE4CC /* MovieListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E151B8422817339B001BE4CC /* MovieListTableViewCell.swift */,
+				E151B8432817339B001BE4CC /* MovieListTableViewCell.xib */,
+			);
+			path = MovieListTableViewCell;
+			sourceTree = "<group>";
+		};
+		E151B84D28175702001BE4CC /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				E151B84B28174238001BE4CC /* SliderView.swift */,
+				E151B8492817417C001BE4CC /* SliderView.xib */,
+				E151B84128173287001BE4CC /* SliderCollectionViewCell */,
+			);
+			path = SliderView;
+			sourceTree = "<group>";
+		};
+		E151B84E28176910001BE4CC /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				E151B84F28176B9D001BE4CC /* View */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		E151B84F28176B9D001BE4CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E151B82B28171DFF001BE4CC /* ViewController.swift */,
+				E151B846281733A0001BE4CC /* MovieListTableViewCell */,
+				E151B84D28175702001BE4CC /* SliderView */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +183,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E151B8452817339B001BE4CC /* MovieListTableViewCell.xib in Resources */,
+				E151B84A2817417C001BE4CC /* SliderView.xib in Resources */,
 				E151B83428171E00001BE4CC /* LaunchScreen.storyboard in Resources */,
 				E151B83128171E00001BE4CC /* Assets.xcassets in Resources */,
 				E151B82F28171DFF001BE4CC /* Main.storyboard in Resources */,
+				E151B84028172C00001BE4CC /* SliderCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +202,9 @@
 				E151B82C28171DFF001BE4CC /* ViewController.swift in Sources */,
 				E151B82828171DFF001BE4CC /* AppDelegate.swift in Sources */,
 				E151B82A28171DFF001BE4CC /* SceneDelegate.swift in Sources */,
+				E151B8442817339B001BE4CC /* MovieListTableViewCell.swift in Sources */,
+				E151B83F28172C00001BE4CC /* SliderCollectionViewCell.swift in Sources */,
+				E151B84C28174238001BE4CC /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
