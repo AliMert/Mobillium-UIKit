@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,9 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="367" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GVv-8a-YdO">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GVv-8a-YdO">
                         <rect key="frame" x="16" y="16" width="95" height="95"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="95" id="WV3-Ky-Oiy"/>
                             <constraint firstAttribute="width" constant="95" id="cU5-wd-Fap"/>
@@ -55,13 +53,13 @@
                 <constraints>
                     <constraint firstItem="qpB-3g-cGx" firstAttribute="top" secondItem="GVv-8a-YdO" secondAttribute="top" constant="8" id="7eb-e6-uIz"/>
                     <constraint firstItem="tJ7-At-NnI" firstAttribute="leading" secondItem="GVv-8a-YdO" secondAttribute="trailing" constant="8" id="G7X-ej-K2X"/>
-                    <constraint firstAttribute="bottom" secondItem="GVv-8a-YdO" secondAttribute="bottom" constant="16" id="IlE-bE-Ubb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NLR-g1-G25" secondAttribute="bottom" priority="750" constant="16" id="HlU-NQ-eUL"/>
                     <constraint firstItem="sEd-OX-ayn" firstAttribute="leading" secondItem="tJ7-At-NnI" secondAttribute="trailing" constant="16" id="KlK-bY-i4y"/>
+                    <constraint firstItem="NLR-g1-G25" firstAttribute="bottom" secondItem="GVv-8a-YdO" secondAttribute="bottom" id="N2H-Sa-Vbh"/>
                     <constraint firstItem="tJ7-At-NnI" firstAttribute="top" secondItem="qpB-3g-cGx" secondAttribute="bottom" constant="8" id="OCD-2x-sHf"/>
                     <constraint firstItem="sEd-OX-ayn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="afR-6V-ypT"/>
                     <constraint firstItem="NLR-g1-G25" firstAttribute="trailing" secondItem="tJ7-At-NnI" secondAttribute="trailing" id="fng-dO-IlF"/>
                     <constraint firstItem="qpB-3g-cGx" firstAttribute="leading" secondItem="GVv-8a-YdO" secondAttribute="trailing" constant="8" id="gLQ-71-P6g"/>
-                    <constraint firstItem="NLR-g1-G25" firstAttribute="bottom" secondItem="GVv-8a-YdO" secondAttribute="bottom" id="iVs-1o-rzf"/>
                     <constraint firstAttribute="trailing" secondItem="sEd-OX-ayn" secondAttribute="trailing" constant="16" id="jZ4-5O-e9M"/>
                     <constraint firstItem="GVv-8a-YdO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jfk-6V-fJ0"/>
                     <constraint firstItem="GVv-8a-YdO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="lG3-2J-Nmp"/>
@@ -69,13 +67,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="NLR-g1-G25" id="eyI-xO-jU2"/>
+                <outlet property="descriptionLabel" destination="tJ7-At-NnI" id="pcp-ce-Jtj"/>
+                <outlet property="imageView" destination="GVv-8a-YdO" id="fMu-Ob-iR8"/>
+                <outlet property="movieImageView" destination="GVv-8a-YdO" id="PMs-yR-Al2"/>
+                <outlet property="titleLabel" destination="qpB-3g-cGx" id="cqY-tx-qWm"/>
+            </connections>
             <point key="canvasLocation" x="171.73913043478262" y="166.40625"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

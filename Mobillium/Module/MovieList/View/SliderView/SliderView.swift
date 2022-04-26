@@ -7,22 +7,30 @@
 
 import UIKit
 
+protocol SliderViewDelegate {
+    func setupView(movies: [Movie])
+}
+
 final class SliderView: UIView {
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var pageControl: UIPageControl!
+    private var movies: [Movie] = []
 
-    init(height: CGFloat) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: height))
-        loadXib()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-
-        collectionView.register(SliderCollectionViewCell.self, forCellWithReuseIdentifier: "SliderCollectionViewCell")
-        collectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SliderCollectionViewCell")
+    init() {
+        super.init(frame: .zero)
+        setupView()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+
+    private func setupView() {
+        loadXib()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
+        collectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SliderCollectionViewCell")
     }
 
     private func loadXib() {
@@ -32,13 +40,20 @@ final class SliderView: UIView {
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
     }
+}
 
+extension SliderView: SliderViewDelegate {
+
+    func setupView(movies: [Movie]) {
+        self.movies = movies
+        collectionView.reloadData()
+    }
 }
 
 extension SliderView:  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        pageControl.numberOfPages = 3
-        return 3
+        pageControl.numberOfPages = movies.count
+        return movies.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,14 +61,7 @@ extension SliderView:  UICollectionViewDelegate, UICollectionViewDataSource, UIC
             return UICollectionViewCell()
         }
 
-        switch indexPath.row {
-        case 0:
-            cell.backgroundColor = .red.withAlphaComponent(0.4)
-        case 1:
-            cell.backgroundColor = .blue.withAlphaComponent(0.4)
-        default:
-            cell.backgroundColor = .yellow.withAlphaComponent(0.4)
-        }
+        cell.configure(with: movies[indexPath.row])
         return cell
     }
 

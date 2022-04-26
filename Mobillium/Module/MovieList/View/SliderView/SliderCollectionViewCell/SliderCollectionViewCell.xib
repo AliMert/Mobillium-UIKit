@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-Ob-tjw">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wUW-Ob-tjw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
                     </imageView>
                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHX-qL-AAV">
@@ -55,6 +55,12 @@
                 <constraint firstAttribute="trailing" secondItem="kGt-nO-rHJ" secondAttribute="trailing" constant="16" id="wkb-Cu-7HJ"/>
             </constraints>
             <size key="customSize" width="414" height="259"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="MRt-OG-3et" id="SCr-lL-zBo"/>
+                <outlet property="imageView" destination="wUW-Ob-tjw" id="PyW-bt-yMz"/>
+                <outlet property="shadowView" destination="zHX-qL-AAV" id="c4Z-gG-Zhd"/>
+                <outlet property="titleLabel" destination="kGt-nO-rHJ" id="ZS0-xV-LrK"/>
+            </connections>
             <point key="canvasLocation" x="401.44927536231887" y="208.59375"/>
         </collectionViewCell>
     </objects>

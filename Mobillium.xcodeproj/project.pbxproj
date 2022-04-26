@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0F751EBEE3C8114F613331 /* Pods_Mobillium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4051F6830071E726FA4A564 /* Pods_Mobillium.framework */; };
 		E151B82828171DFF001BE4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B82728171DFF001BE4CC /* AppDelegate.swift */; };
 		E151B82A28171DFF001BE4CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B82928171DFF001BE4CC /* SceneDelegate.swift */; };
-		E151B82C28171DFF001BE4CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B82B28171DFF001BE4CC /* ViewController.swift */; };
+		E151B82C28171DFF001BE4CC /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B82B28171DFF001BE4CC /* MovieListViewController.swift */; };
 		E151B82F28171DFF001BE4CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E151B82D28171DFF001BE4CC /* Main.storyboard */; };
 		E151B83128171E00001BE4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E151B83028171E00001BE4CC /* Assets.xcassets */; };
 		E151B83428171E00001BE4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E151B83228171E00001BE4CC /* LaunchScreen.storyboard */; };
@@ -19,13 +20,30 @@
 		E151B8452817339B001BE4CC /* MovieListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E151B8432817339B001BE4CC /* MovieListTableViewCell.xib */; };
 		E151B84A2817417C001BE4CC /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E151B8492817417C001BE4CC /* SliderView.xib */; };
 		E151B84C28174238001BE4CC /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B84B28174238001BE4CC /* SliderView.swift */; };
+		E151B8512817E6B6001BE4CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8502817E6B6001BE4CC /* NetworkManager.swift */; };
+		E151B8542817F06A001BE4CC /* MovieListNowPlayingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8532817F06A001BE4CC /* MovieListNowPlayingResponse.swift */; };
+		E151B8572817F108001BE4CC /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8562817F108001BE4CC /* MovieListViewModel.swift */; };
+		E151B85B2817F1CC001BE4CC /* MovieListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B85A2817F1CC001BE4CC /* MovieListService.swift */; };
+		E151B8602818074D001BE4CC /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B85F2818074D001BE4CC /* Endpoint.swift */; };
+		E151B86A28182F5B001BE4CC /* MovieListUpcomingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8682818159E001BE4CC /* MovieListUpcomingResponse.swift */; };
+		E151B86C28182FF9001BE4CC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B86B28182FF9001BE4CC /* AppCoordinator.swift */; };
+		E151B874281833CF001BE4CC /* MovieListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B873281833CF001BE4CC /* MovieListContracts.swift */; };
+		E151B87728183405001BE4CC /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B87628183405001BE4CC /* State.swift */; };
+		E151B879281834FE001BE4CC /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B878281834FE001BE4CC /* MovieDetailViewController.swift */; };
+		E151B87B281835B0001BE4CC /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B87A281835B0001BE4CC /* MovieDetailViewModel.swift */; };
+		E151B87D2818360B001BE4CC /* MovieDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B87C2818360B001BE4CC /* MovieDetailContracts.swift */; };
+		E151B87F2818369A001BE4CC /* MovieCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B87E2818369A001BE4CC /* MovieCoordinator.swift */; };
+		E151B8842818690C001BE4CC /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8832818690C001BE4CC /* CoordinatorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FEBB2A6A9EE11F1DDC00A64 /* Pods-Mobillium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium.release.xcconfig"; path = "Target Support Files/Pods-Mobillium/Pods-Mobillium.release.xcconfig"; sourceTree = "<group>"; };
+		7A72F25155E440C1BEBDE8F1 /* Pods-Mobillium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobillium.debug.xcconfig"; path = "Target Support Files/Pods-Mobillium/Pods-Mobillium.debug.xcconfig"; sourceTree = "<group>"; };
+		C4051F6830071E726FA4A564 /* Pods_Mobillium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobillium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E151B82428171DFF001BE4CC /* Mobillium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobillium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E151B82728171DFF001BE4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E151B82928171DFF001BE4CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E151B82B28171DFF001BE4CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E151B82B28171DFF001BE4CC /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		E151B82E28171DFF001BE4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E151B83028171E00001BE4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E151B83328171E00001BE4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +54,20 @@
 		E151B8432817339B001BE4CC /* MovieListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListTableViewCell.xib; sourceTree = "<group>"; };
 		E151B8492817417C001BE4CC /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
 		E151B84B28174238001BE4CC /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		E151B8502817E6B6001BE4CC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E151B8532817F06A001BE4CC /* MovieListNowPlayingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListNowPlayingResponse.swift; sourceTree = "<group>"; };
+		E151B8562817F108001BE4CC /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		E151B85A2817F1CC001BE4CC /* MovieListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListService.swift; sourceTree = "<group>"; };
+		E151B85F2818074D001BE4CC /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		E151B8682818159E001BE4CC /* MovieListUpcomingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListUpcomingResponse.swift; sourceTree = "<group>"; };
+		E151B86B28182FF9001BE4CC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E151B873281833CF001BE4CC /* MovieListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListContracts.swift; sourceTree = "<group>"; };
+		E151B87628183405001BE4CC /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		E151B878281834FE001BE4CC /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		E151B87A281835B0001BE4CC /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		E151B87C2818360B001BE4CC /* MovieDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailContracts.swift; sourceTree = "<group>"; };
+		E151B87E2818369A001BE4CC /* MovieCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCoordinator.swift; sourceTree = "<group>"; };
+		E151B8832818690C001BE4CC /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +75,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0F751EBEE3C8114F613331 /* Pods_Mobillium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8052B5A3E1C6CD4961A9B160 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A72F25155E440C1BEBDE8F1 /* Pods-Mobillium.debug.xcconfig */,
+				1FEBB2A6A9EE11F1DDC00A64 /* Pods-Mobillium.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CACF1C6B2C9B08E0AFCDCFE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4051F6830071E726FA4A564 /* Pods_Mobillium.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E151B81B28171DFF001BE4CC = {
 			isa = PBXGroup;
 			children = (
 				E151B82628171DFF001BE4CC /* Mobillium */,
 				E151B82528171DFF001BE4CC /* Products */,
+				8052B5A3E1C6CD4961A9B160 /* Pods */,
+				CACF1C6B2C9B08E0AFCDCFE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,12 +120,11 @@
 		E151B82628171DFF001BE4CC /* Mobillium */ = {
 			isa = PBXGroup;
 			children = (
-				E151B82928171DFF001BE4CC /* SceneDelegate.swift */,
-				E151B82728171DFF001BE4CC /* AppDelegate.swift */,
-				E151B84E28176910001BE4CC /* MovieList */,
-				E151B82D28171DFF001BE4CC /* Main.storyboard */,
-				E151B83028171E00001BE4CC /* Assets.xcassets */,
-				E151B83228171E00001BE4CC /* LaunchScreen.storyboard */,
+				E151B875281833FA001BE4CC /* Common */,
+				E151B861281811B6001BE4CC /* App */,
+				E151B862281811C7001BE4CC /* Module */,
+				E151B8582817F1B1001BE4CC /* Network */,
+				E151B863281811DC001BE4CC /* Resources */,
 				E151B83528171E00001BE4CC /* Info.plist */,
 			);
 			path = Mobillium;
@@ -110,6 +161,9 @@
 		E151B84E28176910001BE4CC /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				E151B88028183AD9001BE4CC /* Coordinator */,
+				E151B871281833A8001BE4CC /* SubModules */,
+				E151B8552817F0F5001BE4CC /* ViewModel */,
 				E151B84F28176B9D001BE4CC /* View */,
 			);
 			path = MovieList;
@@ -118,9 +172,157 @@
 		E151B84F28176B9D001BE4CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E151B82B28171DFF001BE4CC /* ViewController.swift */,
+				E151B82B28171DFF001BE4CC /* MovieListViewController.swift */,
 				E151B846281733A0001BE4CC /* MovieListTableViewCell */,
 				E151B84D28175702001BE4CC /* SliderView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E151B8552817F0F5001BE4CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E151B8562817F108001BE4CC /* MovieListViewModel.swift */,
+				E151B873281833CF001BE4CC /* MovieListContracts.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E151B8582817F1B1001BE4CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E151B85F2818074D001BE4CC /* Endpoint.swift */,
+				E151B8502817E6B6001BE4CC /* NetworkManager.swift */,
+				E151B8642818123A001BE4CC /* Modules */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E151B8592817F1B9001BE4CC /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				E151B86528181413001BE4CC /* NowPlaying */,
+				E151B86628181423001BE4CC /* Upcoming */,
+				E151B85A2817F1CC001BE4CC /* MovieListService.swift */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		E151B85C2817F2AB001BE4CC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E151B8532817F06A001BE4CC /* MovieListNowPlayingResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E151B861281811B6001BE4CC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E151B82728171DFF001BE4CC /* AppDelegate.swift */,
+				E151B82928171DFF001BE4CC /* SceneDelegate.swift */,
+				E151B86B28182FF9001BE4CC /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E151B862281811C7001BE4CC /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E151B84E28176910001BE4CC /* MovieList */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		E151B863281811DC001BE4CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E151B82D28171DFF001BE4CC /* Main.storyboard */,
+				E151B83028171E00001BE4CC /* Assets.xcassets */,
+				E151B83228171E00001BE4CC /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E151B8642818123A001BE4CC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E151B8592817F1B9001BE4CC /* MovieList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E151B86528181413001BE4CC /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				E151B85C2817F2AB001BE4CC /* Response */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		E151B86628181423001BE4CC /* Upcoming */ = {
+			isa = PBXGroup;
+			children = (
+				E151B8672818142F001BE4CC /* Response */,
+			);
+			path = Upcoming;
+			sourceTree = "<group>";
+		};
+		E151B8672818142F001BE4CC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E151B8682818159E001BE4CC /* MovieListUpcomingResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E151B871281833A8001BE4CC /* SubModules */ = {
+			isa = PBXGroup;
+			children = (
+				E151B872281833B5001BE4CC /* MovieDetail */,
+			);
+			path = SubModules;
+			sourceTree = "<group>";
+		};
+		E151B872281833B5001BE4CC /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E151B882281840E1001BE4CC /* View */,
+				E151B881281840CF001BE4CC /* ViewModel */,
+			);
+			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		E151B875281833FA001BE4CC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E151B87628183405001BE4CC /* State.swift */,
+				E151B8832818690C001BE4CC /* CoordinatorProtocol.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E151B88028183AD9001BE4CC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E151B87E2818369A001BE4CC /* MovieCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		E151B881281840CF001BE4CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E151B87C2818360B001BE4CC /* MovieDetailContracts.swift */,
+				E151B87A281835B0001BE4CC /* MovieDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E151B882281840E1001BE4CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E151B878281834FE001BE4CC /* MovieDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,9 +334,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E151B83828171E00001BE4CC /* Build configuration list for PBXNativeTarget "Mobillium" */;
 			buildPhases = (
+				7064C771C547818CBE8C391D /* [CP] Check Pods Manifest.lock */,
 				E151B82028171DFF001BE4CC /* Sources */,
 				E151B82128171DFF001BE4CC /* Frameworks */,
 				E151B82228171DFF001BE4CC /* Resources */,
+				E5872552BFD2E4A2990EF41A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,17 +398,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7064C771C547818CBE8C391D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mobillium-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5872552BFD2E4A2990EF41A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobillium/Pods-Mobillium-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mobillium/Pods-Mobillium-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mobillium/Pods-Mobillium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E151B82028171DFF001BE4CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E151B82C28171DFF001BE4CC /* ViewController.swift in Sources */,
+				E151B874281833CF001BE4CC /* MovieListContracts.swift in Sources */,
+				E151B87F2818369A001BE4CC /* MovieCoordinator.swift in Sources */,
+				E151B8842818690C001BE4CC /* CoordinatorProtocol.swift in Sources */,
+				E151B82C28171DFF001BE4CC /* MovieListViewController.swift in Sources */,
 				E151B82828171DFF001BE4CC /* AppDelegate.swift in Sources */,
+				E151B86C28182FF9001BE4CC /* AppCoordinator.swift in Sources */,
+				E151B85B2817F1CC001BE4CC /* MovieListService.swift in Sources */,
+				E151B879281834FE001BE4CC /* MovieDetailViewController.swift in Sources */,
+				E151B8542817F06A001BE4CC /* MovieListNowPlayingResponse.swift in Sources */,
+				E151B87B281835B0001BE4CC /* MovieDetailViewModel.swift in Sources */,
+				E151B87728183405001BE4CC /* State.swift in Sources */,
 				E151B82A28171DFF001BE4CC /* SceneDelegate.swift in Sources */,
+				E151B8512817E6B6001BE4CC /* NetworkManager.swift in Sources */,
 				E151B8442817339B001BE4CC /* MovieListTableViewCell.swift in Sources */,
+				E151B86A28182F5B001BE4CC /* MovieListUpcomingResponse.swift in Sources */,
 				E151B83F28172C00001BE4CC /* SliderCollectionViewCell.swift in Sources */,
 				E151B84C28174238001BE4CC /* SliderView.swift in Sources */,
+				E151B8602818074D001BE4CC /* Endpoint.swift in Sources */,
+				E151B87D2818360B001BE4CC /* MovieDetailContracts.swift in Sources */,
+				E151B8572817F108001BE4CC /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +608,7 @@
 		};
 		E151B83928171E00001BE4CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A72F25155E440C1BEBDE8F1 /* Pods-Mobillium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -376,6 +637,7 @@
 		};
 		E151B83A28171E00001BE4CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FEBB2A6A9EE11F1DDC00A64 /* Pods-Mobillium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
