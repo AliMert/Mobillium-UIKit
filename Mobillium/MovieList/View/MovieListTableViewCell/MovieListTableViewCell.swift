@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieListTableViewCell: UITableViewCell {
+final class MovieListTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

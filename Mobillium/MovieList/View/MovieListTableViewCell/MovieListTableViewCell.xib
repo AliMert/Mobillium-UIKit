@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListTableViewCell" rowHeight="139" id="KGk-i7-Jjw" customClass="MovieListTableViewCell" customModule="Mobillium" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="367" height="139"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieListTableViewCell" rowHeight="127" id="KGk-i7-Jjw" customClass="MovieListTableViewCell" customModule="Mobillium" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="127"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="367" height="139"/>
+                <rect key="frame" x="0.0" y="0.0" width="367" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GVv-8a-YdO">
@@ -26,19 +26,19 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE GREAT BEAUTY (2013)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpB-3g-cGx">
-                        <rect key="frame" x="119" y="16" width="240" height="18"/>
+                        <rect key="frame" x="119" y="24" width="240" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JEP GAMBARDELLA HAS SEDUCED HIS WAY THROUGH THE LAVISH..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ7-At-NnI">
-                        <rect key="frame" x="119" y="42" width="196" height="31.5"/>
+                        <rect key="frame" x="119" y="50" width="196" height="31.5"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sEd-OX-ayn">
-                        <rect key="frame" x="331" y="61.5" width="20" height="16.5"/>
+                        <rect key="frame" x="331" y="55.5" width="20" height="16.5"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="L5I-ts-co7"/>
@@ -53,8 +53,9 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="qpB-3g-cGx" firstAttribute="top" secondItem="GVv-8a-YdO" secondAttribute="top" id="7eb-e6-uIz"/>
+                    <constraint firstItem="qpB-3g-cGx" firstAttribute="top" secondItem="GVv-8a-YdO" secondAttribute="top" constant="8" id="7eb-e6-uIz"/>
                     <constraint firstItem="tJ7-At-NnI" firstAttribute="leading" secondItem="GVv-8a-YdO" secondAttribute="trailing" constant="8" id="G7X-ej-K2X"/>
+                    <constraint firstAttribute="bottom" secondItem="GVv-8a-YdO" secondAttribute="bottom" constant="16" id="IlE-bE-Ubb"/>
                     <constraint firstItem="sEd-OX-ayn" firstAttribute="leading" secondItem="tJ7-At-NnI" secondAttribute="trailing" constant="16" id="KlK-bY-i4y"/>
                     <constraint firstItem="tJ7-At-NnI" firstAttribute="top" secondItem="qpB-3g-cGx" secondAttribute="bottom" constant="8" id="OCD-2x-sHf"/>
                     <constraint firstItem="sEd-OX-ayn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="afR-6V-ypT"/>
@@ -68,7 +69,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="171.73913043478262" y="170.42410714285714"/>
+            <point key="canvasLocation" x="171.73913043478262" y="166.40625"/>
         </tableViewCell>
     </objects>
     <resources>

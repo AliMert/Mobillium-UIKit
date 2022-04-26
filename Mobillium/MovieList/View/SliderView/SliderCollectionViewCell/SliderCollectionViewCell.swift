@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SliderCollectionViewCell: UICollectionViewCell {
+final class SliderCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
