@@ -18,6 +18,7 @@ protocol MovieListViewModelProtocol {
 
 enum MovieListViewModelOutput: Equatable {
     case setState(State)
+    case setLoading(Bool)
 }
 
 protocol MovieListViewModelDelegate: AnyObject {

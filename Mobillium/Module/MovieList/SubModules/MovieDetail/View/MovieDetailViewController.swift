@@ -98,17 +98,9 @@ final class MovieDetailViewController: UIViewController {
             make.height.equalTo(256)
         }
 
-        let container = UIView()
-        container.addSubview(featureStack)
-        featureStack.snp.makeConstraints { make in
-            make.leading.equalTo(container)
-            make.top.equalTo(container)
-            make.bottom.equalTo(container)
-        }
-        detailStack.addArrangedSubview(container)
+        prepareFeatureStack()
         detailStack.addArrangedSubview(titleLabel)
         detailStack.addArrangedSubview(descriptionLabel)
-
 
         featureStack.addArrangedSubview(UIImageView(image: Assets.imdb.image))
         featureStack.addArrangedSubview(UIImageView(image: Assets.star.image))
@@ -142,6 +134,15 @@ final class MovieDetailViewController: UIViewController {
         contentStack.addArrangedSubview(detailContainerView)
     }
 
+    private func prepareFeatureStack() {
+        let containerView = UIView()
+        containerView.addSubview(featureStack)
+        featureStack.snp.makeConstraints { make in
+            make.leading.top.bottom.equalTo(containerView)
+        }
+        detailStack.addArrangedSubview(containerView)
+    }
+
     private func configureUI() {
         guard let movieDetail = viewModel.movieDetail else {
             return
@@ -152,7 +153,7 @@ final class MovieDetailViewController: UIViewController {
         dateLabel.text = movieDetail.releaseDate
 
         if let voteAverage = movieDetail.voteAverage {
-            avarageVoteLabel.text = String(format: "%.2f", voteAverage)
+            avarageVoteLabel.text = String(format: "%.1f", voteAverage)
         }
 
         guard let posterPath = movieDetail.backdropPath,
@@ -191,10 +192,10 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
             case .success:
                 configureUI()
             case .failure(let errorMessage):
-                print("something wnt wrong:", errorMessage)
+                showAlert(errorMessage)
             }
         case .setLoading(let isLoading):
-            print("show loading:", isLoading)
+            view.setLoading(isLoading)
         }
     }
 }

@@ -26,10 +26,13 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
 private extension MovieDetailViewModel {
 
     func callMovieDetail() {
+        delegate?.handleViewModelOutput(.setLoading(true))
         MovieService.detail(with: movieId) { [weak self] (response) in
             guard let self = self else {
                 return
             }
+            self.delegate?.handleViewModelOutput(.setLoading(false))
+
             switch response.result {
             case .success(let response):
                 self.movieDetail = MovieDetailItem(with: response)

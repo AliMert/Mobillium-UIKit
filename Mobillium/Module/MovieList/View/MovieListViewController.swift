@@ -57,6 +57,7 @@ final class MovieListViewController: UIViewController {
     private func prepareUI() {
         view.backgroundColor = .systemBackground
         setupTableView()
+        sliderView.delegate = self
     }
 
     private func setupTableView() {
@@ -101,9 +102,20 @@ extension MovieListViewController: MovieListViewModelDelegate {
                 tableView.reloadData()
                 tableView.refreshControl?.endRefreshing()
             case .failure(let errorMessage):
-                print(errorMessage)
+                showAlert(errorMessage)
             }
+        case .setLoading(let isLoading):
+            view.setLoading(isLoading)
         }
+    }
+}
+
+// MARK: - SliderViewDelegate Methods
+
+extension MovieListViewController: SliderViewDelegate {
+
+    func didSelect(index: Int) {
+        viewModel.didSelectNowPlayingMovie(at: index)
     }
 }
 

@@ -16,10 +16,12 @@ final class MovieListViewModel: MovieListViewModelProtocol {
     private var serviceCallGroup = DispatchGroup()
 
     func loadData() {
+        delegate?.handleViewModelOutput(.setLoading(true))
         callNowPlaying()
         callUpcoming()
 
         serviceCallGroup.notify(queue: .main) { [weak self] in
+            self?.delegate?.handleViewModelOutput(.setLoading(false))
             self?.delegate?.handleViewModelOutput(.setState(.success))
         }
     }
@@ -56,6 +58,7 @@ private extension MovieListViewModel {
                     self.nowPlayingMovies = Array(movies.prefix(5)).map(MovieItem.init)
                 }
             case .failure(let error):
+                self.delegate?.handleViewModelOutput(.setLoading(false))
                 self.delegate?.handleViewModelOutput(.setState(.failure(error.localizedDescription)))
             }
             self.serviceCallGroup.leave()
@@ -73,7 +76,8 @@ private extension MovieListViewModel {
             case .success(let response):
                 self.upcomingMovies = (response.results?.map(MovieItem.init)) ?? []
             case .failure(let error):
-                print(error)
+                self.delegate?.handleViewModelOutput(.setLoading(false))
+                self.delegate?.handleViewModelOutput(.setState(.failure(error.localizedDescription)))
             }
             self.serviceCallGroup.leave()
         }

@@ -42,6 +42,9 @@
 		E151B89728188D08001BE4CC /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B89628188D08001BE4CC /* String+Extensions.swift */; };
 		E151B89A28188F54001BE4CC /* MovieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B89928188F54001BE4CC /* MovieItem.swift */; };
 		E151B89C28188F72001BE4CC /* MovieItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B89B28188F72001BE4CC /* MovieItem+Extensions.swift */; };
+		E151B8A028189462001BE4CC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B89F28189462001BE4CC /* LoadingView.swift */; };
+		E151B8A228189919001BE4CC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8A128189919001BE4CC /* UIView+Extensions.swift */; };
+		E151B8A428189D92001BE4CC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B8A328189D92001BE4CC /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		E151B89628188D08001BE4CC /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		E151B89928188F54001BE4CC /* MovieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItem.swift; sourceTree = "<group>"; };
 		E151B89B28188F72001BE4CC /* MovieItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieItem+Extensions.swift"; sourceTree = "<group>"; };
+		E151B89F28189462001BE4CC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E151B8A128189919001BE4CC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E151B8A328189D92001BE4CC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,7 +323,8 @@
 				E151B8832818690C001BE4CC /* CoordinatorProtocol.swift */,
 				E151B89228187FE6001BE4CC /* Assets.swift */,
 				E151B89428188703001BE4CC /* Color.swift */,
-				E151B89628188D08001BE4CC /* String+Extensions.swift */,
+				E151B89E28189457001BE4CC /* View */,
+				E151B89D2818944F001BE4CC /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -389,6 +396,24 @@
 				E151B89B28188F72001BE4CC /* MovieItem+Extensions.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E151B89D2818944F001BE4CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E151B89628188D08001BE4CC /* String+Extensions.swift */,
+				E151B8A128189919001BE4CC /* UIView+Extensions.swift */,
+				E151B8A328189D92001BE4CC /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E151B89E28189457001BE4CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E151B89F28189462001BE4CC /* LoadingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,12 +538,14 @@
 				E151B89328187FE6001BE4CC /* Assets.swift in Sources */,
 				E151B891281873FD001BE4CC /* MovieDetailItem+Extensions.swift in Sources */,
 				E151B89C28188F72001BE4CC /* MovieItem+Extensions.swift in Sources */,
+				E151B8A428189D92001BE4CC /* UIViewController+Extensions.swift in Sources */,
 				E151B89728188D08001BE4CC /* String+Extensions.swift in Sources */,
 				E151B87F2818369A001BE4CC /* MovieCoordinator.swift in Sources */,
 				E151B88B28186DAC001BE4CC /* MovieDetailResponse.swift in Sources */,
 				E151B8842818690C001BE4CC /* CoordinatorProtocol.swift in Sources */,
 				E151B82C28171DFF001BE4CC /* MovieListViewController.swift in Sources */,
 				E151B82828171DFF001BE4CC /* AppDelegate.swift in Sources */,
+				E151B8A228189919001BE4CC /* UIView+Extensions.swift in Sources */,
 				E151B86C28182FF9001BE4CC /* AppCoordinator.swift in Sources */,
 				E151B85B2817F1CC001BE4CC /* MovieService.swift in Sources */,
 				E151B879281834FE001BE4CC /* MovieDetailViewController.swift in Sources */,
@@ -534,6 +561,7 @@
 				E151B88F281873C4001BE4CC /* MovieDetailItem.swift in Sources */,
 				E151B83F28172C00001BE4CC /* SliderCollectionViewCell.swift in Sources */,
 				E151B84C28174238001BE4CC /* SliderView.swift in Sources */,
+				E151B8A028189462001BE4CC /* LoadingView.swift in Sources */,
 				E151B8602818074D001BE4CC /* Endpoint.swift in Sources */,
 				E151B87D2818360B001BE4CC /* MovieDetailContracts.swift in Sources */,
 				E151B8572817F108001BE4CC /* MovieListViewModel.swift in Sources */,

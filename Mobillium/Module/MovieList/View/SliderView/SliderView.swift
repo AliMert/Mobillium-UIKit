@@ -8,13 +8,22 @@
 import UIKit
 
 protocol SliderViewDelegate {
-    func setupView(movies: [MovieItem])
+    func didSelect(index: Int)
 }
 
 final class SliderView: UIView {
+
+    // MARK: - Properties
+
+    private var movies: [MovieItem] = []
+    var delegate: SliderViewDelegate?
+
+    // MARK: - Views
+
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
-    private var movies: [MovieItem] = []
+    
+    // MARK: - Init
 
     init() {
         super.init(frame: .zero)
@@ -25,11 +34,12 @@ final class SliderView: UIView {
         super.init(coder: coder)
     }
 
+    // MARK: - UI
+
     private func setupView() {
         loadXib()
         collectionView.delegate = self
         collectionView.dataSource = self
-
         collectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SliderCollectionViewCell")
     }
 
@@ -42,13 +52,17 @@ final class SliderView: UIView {
     }
 }
 
-extension SliderView: SliderViewDelegate {
+// MARK: - SliderView Public Methods
 
-    func setupView(movies: [MovieItem]) {
+extension SliderView {
+
+    public func setupView(movies: [MovieItem]) {
         self.movies = movies
         collectionView.reloadData()
     }
 }
+
+// MARK: - UICollectionView Delegate Methods
 
 extension SliderView:  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -63,6 +77,10 @@ extension SliderView:  UICollectionViewDelegate, UICollectionViewDataSource, UIC
 
         cell.configure(with: movies[indexPath.row])
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelect(index: indexPath.row)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
