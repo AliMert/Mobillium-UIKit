@@ -11,7 +11,6 @@
 		E151B82828171DFF001BE4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B82728171DFF001BE4CC /* AppDelegate.swift */; };
 		E151B82A28171DFF001BE4CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B82928171DFF001BE4CC /* SceneDelegate.swift */; };
 		E151B82C28171DFF001BE4CC /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B82B28171DFF001BE4CC /* MovieListViewController.swift */; };
-		E151B82F28171DFF001BE4CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E151B82D28171DFF001BE4CC /* Main.storyboard */; };
 		E151B83128171E00001BE4CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E151B83028171E00001BE4CC /* Assets.xcassets */; };
 		E151B83428171E00001BE4CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E151B83228171E00001BE4CC /* LaunchScreen.storyboard */; };
 		E151B83F28172C00001BE4CC /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E151B83D28172C00001BE4CC /* SliderCollectionViewCell.swift */; };
@@ -55,7 +54,6 @@
 		E151B82728171DFF001BE4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E151B82928171DFF001BE4CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E151B82B28171DFF001BE4CC /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
-		E151B82E28171DFF001BE4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E151B83028171E00001BE4CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E151B83328171E00001BE4CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E151B83528171E00001BE4CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 		E151B863281811DC001BE4CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E151B82D28171DFF001BE4CC /* Main.storyboard */,
 				E151B83028171E00001BE4CC /* Assets.xcassets */,
 				E151B83228171E00001BE4CC /* LaunchScreen.storyboard */,
 			);
@@ -320,9 +317,9 @@
 			isa = PBXGroup;
 			children = (
 				E151B87628183405001BE4CC /* State.swift */,
-				E151B8832818690C001BE4CC /* CoordinatorProtocol.swift */,
 				E151B89228187FE6001BE4CC /* Assets.swift */,
 				E151B89428188703001BE4CC /* Color.swift */,
+				E151B8832818690C001BE4CC /* CoordinatorProtocol.swift */,
 				E151B89E28189457001BE4CC /* View */,
 				E151B89D2818944F001BE4CC /* Extensions */,
 			);
@@ -480,7 +477,6 @@
 				E151B84A2817417C001BE4CC /* SliderView.xib in Resources */,
 				E151B83428171E00001BE4CC /* LaunchScreen.storyboard in Resources */,
 				E151B83128171E00001BE4CC /* Assets.xcassets in Resources */,
-				E151B82F28171DFF001BE4CC /* Main.storyboard in Resources */,
 				E151B84028172C00001BE4CC /* SliderCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,14 +567,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E151B82D28171DFF001BE4CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E151B82E28171DFF001BE4CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E151B83228171E00001BE4CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -719,7 +707,6 @@
 				INFOPLIST_FILE = Mobillium/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -731,7 +718,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -748,7 +735,6 @@
 				INFOPLIST_FILE = Mobillium/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -760,7 +746,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

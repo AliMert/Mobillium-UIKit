@@ -10,7 +10,6 @@ import UIKit.UIImage
 enum Assets {
     case imdb
     case star
-    case arrow
 
     var image: UIImage? {
         switch self {
@@ -18,8 +17,6 @@ enum Assets {
             return UIImage(named: "IMDB Logo")
         case .star:
             return UIImage(named: "Rate Icon")
-        case .arrow:
-            return UIImage(named: "Arrow Icon")
         }
     }
 }
