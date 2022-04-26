@@ -7,11 +7,11 @@
 
 import Alamofire
 
-final class MovieListService {
+final class MovieService {
 
     static func nowPlaying(completion: @escaping (Response<MovieListNowPlayingResponse>)->Void) {
         NetworkManager.request(
-            Endpoint.MovieList.nowPlaying,
+            Endpoint.Movie.List.nowPlaying,
             MovieListNowPlayingResponse.self,
             completion: completion
         )
@@ -19,8 +19,16 @@ final class MovieListService {
 
     static func upcoming(completion: @escaping (Response<MovieListUpcomingResponse>)->Void) {
         NetworkManager.request(
-            Endpoint.MovieList.upcoming,
+            Endpoint.Movie.List.upcoming,
             MovieListUpcomingResponse.self,
+            completion: completion
+        )
+    }
+
+    static func detail(with movieId: Int, completion: @escaping (Response<MovieDetailResponse>)->Void) {
+        NetworkManager.request(
+            Endpoint.Movie.detail(id: movieId),
+            MovieDetailResponse.self,
             completion: completion
         )
     }

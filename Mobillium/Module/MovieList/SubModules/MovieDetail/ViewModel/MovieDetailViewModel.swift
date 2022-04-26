@@ -8,7 +8,35 @@
 final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     weak var coordinatorDelegate: MovieCoordinatorProtocol?
     weak var delegate: MovieDetailViewModelDelegate?
+    private(set) var movieDetail: MovieDetailItem?
+
+    private let movieId: Int
+
+    init(movieId: Int) {
+        self.movieId = movieId
+    }
 
     func loadData() {
+        callMovieDetail()
+    }
+}
+
+// MARK: - Network
+
+private extension MovieDetailViewModel {
+
+    func callMovieDetail() {
+        MovieService.detail(with: movieId) { [weak self] (response) in
+            guard let self = self else {
+                return
+            }
+            switch response.result {
+            case .success(let response):
+                self.movieDetail = MovieDetailItem(with: response)
+                self.delegate?.handleViewModelOutput(.setState(.success))
+            case .failure(let error):
+                self.delegate?.handleViewModelOutput(.setState(.failure(error.localizedDescription)))
+            }
+        }
     }
 }

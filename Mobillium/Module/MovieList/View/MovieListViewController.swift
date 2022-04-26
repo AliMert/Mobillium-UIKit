@@ -42,8 +42,14 @@ final class MovieListViewController: UIViewController {
         viewModel.loadData()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.navigationBar.barStyle = .black
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     // MARK: - UI
@@ -94,8 +100,8 @@ extension MovieListViewController: MovieListViewModelDelegate {
                 sliderView.setupView(movies: viewModel.nowPlayingMovies)
                 tableView.reloadData()
                 tableView.refreshControl?.endRefreshing()
-            case .failure:
-                print("Something went wrong...")
+            case .failure(let errorMessage):
+                print(errorMessage)
             }
         }
     }
@@ -119,8 +125,7 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tapped at: ", indexPath)
-        viewModel.coordinatorDelegate?.goToMovieDetail()
+        viewModel.didSelectUpcomingMovie(at: indexPath.row)
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

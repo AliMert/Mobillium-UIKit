@@ -10,9 +10,16 @@ enum Endpoint {
     static let image = "https://image.tmdb.org/t/p/w500/"
     static let base = "https://api.themoviedb.org/3/"
 
-    enum MovieList {
+    enum Movie{
         private static let movie = base + "movie/"
-        static let nowPlaying = movie + "now_playing"
-        static let upcoming = movie + "upcoming"
+
+        enum List {
+            static let nowPlaying = movie + "now_playing"
+            static let upcoming = movie + "upcoming"
+        }
+
+        static func detail(id: Int) -> String {
+            movie + "\(id)"
+        }
     }
 }

@@ -36,13 +36,15 @@ extension NetworkManager {
         _ T: T.Type,
         completion: @escaping (Response<T>) -> Void
     ) {
-        AF.request(
-            endpoint,
-            method: method,
-            parameters: NetworkManager.getParameters(),
-            headers: NetworkManager.getHeaders()
-        ).responseDecodable { (response: DataResponse<T, AFError>) in
-            completion(response)
+        DispatchQueue.main.async {
+            AF.request(
+                endpoint,
+                method: method,
+                parameters: NetworkManager.getParameters(),
+                headers: NetworkManager.getHeaders()
+            ).responseDecodable { (response: DataResponse<T, AFError>) in
+                completion(response)
+            }
         }
     }
 }

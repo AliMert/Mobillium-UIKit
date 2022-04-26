@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MovieCoordinatorProtocol: CoordinatorProtocol {
-    func goToMovieDetail()
+    func goToMovieDetail(with id: Int)
 }
 
 final class MovieCoordinator: MovieCoordinatorProtocol {
@@ -22,10 +22,11 @@ final class MovieCoordinator: MovieCoordinatorProtocol {
         rootViewController = UINavigationController(rootViewController: controller)
     }
 
-    func goToMovieDetail() {
-        let viewModel = MovieDetailViewModel()
+    func goToMovieDetail(with id: Int) {
+        let viewModel = MovieDetailViewModel(movieId: id)
         viewModel.coordinatorDelegate = self
         let controller = MovieDetailViewController(viewModel: viewModel)
+        rootViewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         rootViewController.pushViewController(controller, animated: true)
     }
 }

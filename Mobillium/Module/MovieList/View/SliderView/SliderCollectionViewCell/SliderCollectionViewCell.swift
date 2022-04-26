@@ -20,7 +20,7 @@ final class SliderCollectionViewCell: UICollectionViewCell {
         shadowView.alpha = 0.4
     }
 
-    public func configure(with movie: Movie) {
+    public func configure(with movie: MovieItem) {
         titleLabel.text = movie.title
         descriptionLabel.text = movie.overview
 

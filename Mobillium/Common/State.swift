@@ -5,7 +5,7 @@
 //  Created by Ali Mert Özhayta on 26.04.2022.
 //
 
-enum State {
+enum State: Equatable {
     case success
-    case failure
+    case failure(String)
 }

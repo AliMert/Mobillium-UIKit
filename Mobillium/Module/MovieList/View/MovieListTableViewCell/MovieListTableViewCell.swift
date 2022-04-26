@@ -26,9 +26,10 @@ final class MovieListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    public func configure(with movie: Movie) {
+    public func configure(with movie: MovieItem) {
         titleLabel.text = movie.title
         descriptionLabel.text = movie.overview
+        dateLabel.text = movie.releaseDate
 
         guard let posterPath = movie.backdropPath,
               let url = URL(string: Endpoint.image + posterPath) else {

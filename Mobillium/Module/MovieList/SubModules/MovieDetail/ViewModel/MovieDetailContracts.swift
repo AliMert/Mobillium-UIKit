@@ -8,11 +8,14 @@
 protocol MovieDetailViewModelProtocol {
     var coordinatorDelegate: MovieCoordinatorProtocol? { get }
     var delegate: MovieDetailViewModelDelegate? { get set }
+    var movieDetail: MovieDetailItem? { get }
 
     func loadData()
 }
 
 enum MovieDetailViewModelOutput: Equatable {
+    case setState(State)
+    case setLoading(Bool)
 }
 
 protocol MovieDetailViewModelDelegate: AnyObject {

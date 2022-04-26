@@ -8,13 +8,13 @@
 import UIKit
 
 protocol SliderViewDelegate {
-    func setupView(movies: [Movie])
+    func setupView(movies: [MovieItem])
 }
 
 final class SliderView: UIView {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var pageControl: UIPageControl!
-    private var movies: [Movie] = []
+    private var movies: [MovieItem] = []
 
     init() {
         super.init(frame: .zero)
@@ -44,7 +44,7 @@ final class SliderView: UIView {
 
 extension SliderView: SliderViewDelegate {
 
-    func setupView(movies: [Movie]) {
+    func setupView(movies: [MovieItem]) {
         self.movies = movies
         collectionView.reloadData()
     }

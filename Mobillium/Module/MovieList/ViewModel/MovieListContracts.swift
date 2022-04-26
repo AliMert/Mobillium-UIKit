@@ -8,10 +8,12 @@
 protocol MovieListViewModelProtocol {
     var coordinatorDelegate: MovieCoordinatorProtocol? { get }
     var delegate: MovieListViewModelDelegate? { get set }
-    var nowPlayingMovies: [Movie] { get }
-    var upcomingMovies: [Movie] { get }
+    var nowPlayingMovies: [MovieItem] { get }
+    var upcomingMovies: [MovieItem] { get }
 
     func loadData()
+    func didSelectUpcomingMovie(at index: Int)
+    func didSelectNowPlayingMovie(at index: Int)
 }
 
 enum MovieListViewModelOutput: Equatable {

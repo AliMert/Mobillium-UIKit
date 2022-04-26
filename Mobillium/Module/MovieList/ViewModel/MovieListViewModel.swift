@@ -10,8 +10,8 @@ import Foundation
 final class MovieListViewModel: MovieListViewModelProtocol {
     weak var coordinatorDelegate: MovieCoordinatorProtocol?
     weak var delegate: MovieListViewModelDelegate?
-    private(set) var nowPlayingMovies: [Movie] = []
-    private(set) var upcomingMovies: [Movie] = []
+    private(set) var nowPlayingMovies: [MovieItem] = []
+    private(set) var upcomingMovies: [MovieItem] = []
 
     private var serviceCallGroup = DispatchGroup()
 
@@ -23,6 +23,20 @@ final class MovieListViewModel: MovieListViewModelProtocol {
             self?.delegate?.handleViewModelOutput(.setState(.success))
         }
     }
+
+    func didSelectNowPlayingMovie(at index: Int) {
+        guard let id = nowPlayingMovies[index].id else {
+            return
+        }
+        coordinatorDelegate?.goToMovieDetail(with: id)
+    }
+
+    func didSelectUpcomingMovie(at index: Int) {
+        guard let id = upcomingMovies[index].id else {
+            return
+        }
+        coordinatorDelegate?.goToMovieDetail(with: id)
+    }
 }
 
 // MARK: - Network
@@ -31,7 +45,7 @@ private extension MovieListViewModel {
 
     func callNowPlaying() {
         serviceCallGroup.enter()
-        MovieListService.nowPlaying { [weak self] (response) in
+        MovieService.nowPlaying { [weak self] (response) in
             guard let self = self else {
                 return
             }
@@ -39,10 +53,10 @@ private extension MovieListViewModel {
             switch response.result {
             case .success(let response):
                 if let movies = response.results {
-                    self.nowPlayingMovies = Array(movies.prefix(5))
+                    self.nowPlayingMovies = Array(movies.prefix(5)).map(MovieItem.init)
                 }
             case .failure(let error):
-                print(error)
+                self.delegate?.handleViewModelOutput(.setState(.failure(error.localizedDescription)))
             }
             self.serviceCallGroup.leave()
         }
@@ -50,14 +64,14 @@ private extension MovieListViewModel {
 
     func callUpcoming() {
         serviceCallGroup.enter()
-        MovieListService.upcoming { [weak self] (response) in
+        MovieService.upcoming { [weak self] (response) in
             guard let self = self else {
                 return
             }
 
             switch response.result {
             case .success(let response):
-                self.upcomingMovies = response.results ?? []
+                self.upcomingMovies = (response.results?.map(MovieItem.init)) ?? []
             case .failure(let error):
                 print(error)
             }
