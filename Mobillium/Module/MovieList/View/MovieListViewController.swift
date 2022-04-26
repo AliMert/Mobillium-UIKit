@@ -105,7 +105,9 @@ extension MovieListViewController: MovieListViewModelDelegate {
                 showAlert(errorMessage)
             }
         case .setLoading(let isLoading):
-            view.setLoading(isLoading)
+            if tableView.refreshControl?.isRefreshing == false {
+                view.setLoading(isLoading)
+            }
         }
     }
 }
